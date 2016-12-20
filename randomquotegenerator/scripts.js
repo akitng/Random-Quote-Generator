@@ -14,6 +14,8 @@ $(document).ready(function() {
           } else {
             $('#quoteAuthor').html("~ " + response.quoteAuthor);
           }
+          $("#tweet").attr("href", "http://twitter.com/home/?status=" + response.quoteText +
+          ' (' + response.quoteAuthor + ')');
         }
       });
     }
