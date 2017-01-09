@@ -1,69 +1,70 @@
 html, body {
   width: 100%;
-  height: 100%;
-  padding: 0px;
+  min-height: 100%;
   margin: 0px;
+  font-family: 'Raleway', sans-serif;
 }
 
-header {
-  position: relative;
-  top: -10px;
-}
-
-h1 {
-  text-align: left;
-  padding-left: 20px;
-  font-size: 35px;
-  outline: 2px solid green;
-}
-
-h2 {
-  text-align: center;
-  font-size: 35px;
-  outline: 2px solid blue;
-  position: relative;
-  top: -25px;
-}
-
-#wrapper {
-  height: 50%;
-  width: 30%;
+body {
+  height: 100%;
+  width: 67%;
   margin: auto;
-  outline: 2px solid green;
   position: relative;
-  top: -30px;
+  top: 50px;
+  padding-bottom: 40px;
 }
 
-#container {
-  outline: 2px solid yellow;
+#header {
+  text-align: left;
+  height: 33%;
+}
+
+#date {
+  float: left;
+  margin-right: 20px;
+}
+
+#wrapper{
   width: 100%;
-  height: 30%;
-  text-align: center;
-  margin-top: -20px;
+  height: 50%;
+  margin-top: 25px;
+  outline: 2px solid pink;
+}
+
+#temperature {
+  float: left;
+  width: 60%;
+  margin-right: 25px;
+  outline: 1px solid red;
+
+}
+
+#weathericon {
+  float: left;
+  width: 50%;
+  height: 70px;
 }
 
 #temp {
-  margin-top: 17px;
-  font-size: 25px;
+  float: left;
+  font-size: 50px;
 }
 
 button {
   height: 25px;
-  width: 125px;
-  position: relative;
-  left: 100px;
-  margin-top: 10px;
+  width: 60px;
+  margin-left: 15px;
+  text-align: center;
 }
 
 #data {
-  margin: 20px 0 0 10px;
 
 }
 
-#data div {
-  padding-bottom: 10px;
-}
 
 footer {
+  height: 20px;
+  position: relative;
+  top: 150px;
   outline: 2px solid red;
 }

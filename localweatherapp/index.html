@@ -3,35 +3,45 @@
   <head>
     <title>Local Weather App</title>
     <link  rel="stylesheet" href="style.css"/>
-    <link href="https://fonts.googleapis.com/css?family=La+Belle+Aurore" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src= "scripts.js"></script>
+    <!--<script src="scripts.js"></script> -->
+    <script src = "debugging.js"></script>
   </head>
   <body>
-    <header>
-      <h1>Local Weather</h1>
-      <h2>Morton Grove</h2>
-    </header>
-    <div id="wrapper">
-      <div id="container">
-        <div id="weathericon">weather icon</div>
-        <div id="temp">3&deg</div>
-      </div>
-      <button id="toggle">Convert to Celsius</button>
-      <div id="data">
-        <div id="humidity">humidity</div>
-        <div id="windspeed">windspeed</div>
-        <div id="cloudiness">cloudiness</div>
-        <div id="rain">rain</div>
-        <div id="snow">snow</div>
-      </div>
-    </div>
-    <footer>
-      <p>
-        Photo credit: <a id="photographer" href="#">melolou</a> via
-                        <a id="site" href="#">Foter.com</a> /
-                        <a href="#">CC BY-NC-ND</a>
-      </p>
-    </footer>
+        <div id="header">
+          <div id= "city">city placeholder</div>
+          <div id= "date">date placeholder</div>
+          <div id= "time">time placeholder</div>
+          <div id= "description">description placeholder</div>
+        </div>
+
+        <div id= "wrapper">
+          <div id= "temperature">
+            <img id="weathericon" src= "#">
+            <div id="temp">3&deg</div>
+            <button id="toggle">&deg C | &deg F</button>
+          </div>
+
+          <div id="data">
+            <div id="humidity">humidity placeholder</div>
+            <div id="rain">rain placeholder</div>
+            <div id="snow">snow placeholder</div>
+            <div id="windspeed">windspeed placeholder</div>
+          </div>
+        </div>
+
+
+        <footer>
+        <p>
+          Photo credit: <a id="photographer" href="#">melolou</a> via
+                          <a id="site" href="#">Foter.com</a> /
+                          <a href="#">CC BY-NC-ND</a>
+        </p>
+      </footer>
+
+    <script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.2'><\/script>".replace("HOST", location.hostname));
+//]]></script>
   </body>
 </html>
