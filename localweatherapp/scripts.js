@@ -19,7 +19,7 @@ function getTime() {
   }
   // I want the time to be based on 12 hour clock and have AM or PM attached to the time
   if (hourNow > 12) {
-    hourNow -+ 12;
+    hourNow -= 12;
     var time = hourNow + ":" + minuteNow + " " + "PM";
   }
   else {
@@ -150,11 +150,24 @@ function getWeather() {
               // temperature in Kelvin and this function will convert it to farenheit.
               (function convertTemp() {
                 var tempInFaren = Math.round(1.8 * (response.main.temp - 273) + 32);
-                $('#temp').html(tempInFaren);
-                return tempInFaren;
+                $('#temp').html(tempInFaren + String.fromCharCode(176));  //this sets the temp with degrees symbol
               })();
 
-              
+              // this function causes the button to switch the temperature between Celsius and Farenheit
+                $('#tempBtn').click(function() {
+                  var button = document.getElementById("tempBtn").textContent;
+                  if (button == "F | C") {
+                  	var tempInCel = Math.round(response.main.temp - 273.15);
+                    $('#temp').html(tempInCel + String.fromCharCode(176));
+                  	$('#tempBtn').html("C | F");
+                  } else {
+                    var tempInFaren = Math.round(1.8 * (response.main.temp - 273) + 32);
+                    $('#temp').html(tempInFaren + String.fromCharCode(176));
+                    $('#tempBtn').html("F | C");
+                  }
+                });
+
+
 
           }
         });

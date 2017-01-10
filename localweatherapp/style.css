@@ -4,14 +4,7 @@ html, body {
   font-family: 'Raleway', sans-serif;
   margin: auto;
 }
-/*
-body {
-  height: 100%;
-  width: 100%;
-  margin: auto;
-  position: relative;
-  top: 50px;
-} */
+
 #wrapper{
   margin-top: 50px;
   height: auto;
@@ -47,8 +40,8 @@ body {
 
 #temperature {
   float: left;
-  width: 55%;
-  outline: 1px solid blue;
+  width: 65%;
+  height: 75px;;
 }
 
 #weathericon {
@@ -65,14 +58,15 @@ body {
 
 button {
   height: 25px;
-  width: 60px;
+  width: 45px;
   margin-left: 15px;
   text-align: center;
 }
 
 #data{
-  padding-left: 20px;
-  outline: 1px solid green;
+  float: right;
+  width: 35%;
+  height: auto;
 }
 
 footer {
@@ -80,6 +74,7 @@ footer {
   font-size: 12px;
   text-align: right;
   padding-right: 10px;
+  clear: both;
 }
 
 footer p {
