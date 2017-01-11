@@ -1,0 +1,6 @@
+2/11/17 Successfully connected to Wikipedia API via AJAX.
+  + I had to search MediaWiki to learn how to reach Wiki's API and learned that
+    I had to add a header for the connection to work.
+  + Ran into error "response to preflight request doesn't pass access control check".
+    Discovered that it's a CORS issue.  I solved the problem by downloading a chrome extension that
+    enables cross-origin resource sharing.  
