@@ -1,0 +1,7 @@
+{
+  "name": "wikipedia_viewer",
+  "version": "0.0.1",
+  "description": "A wikipedia viewer which allows user to search a topic of find a random article ",
+  "main": "script.js",
+  "author": "Amy Ng"
+}

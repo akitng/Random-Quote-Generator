@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     $('#searchBtn').click(function() {
       var wikiUrl = "https://en.wikipedia.org/w/api.php?";
       wikiUrl += "action=opensearch&";
@@ -11,19 +12,23 @@ $(document).ready(function() {
         headers: {'Api-User-Agent' : 'Amy'},
         success: function(response) {
           console.log(response);
-          console.log(response[1][0]);
-          console.log(response[2][0]);
-          console.log(response[3][0]);
-          console.log(response[1][9]);
-          console.log(response[2][9]);
-          console.log(response[3][9]);
 
-          $('#first').html(response[1][9] + "<br/>" +response[2][9] + "<br/>" + response[3][9]);
-          $('#first').attr('href' , response[3][9]);
+          // The response is an array. response[0] is a string of the searched word,
+          // response[1] is an array of the searched word, response[2] is an array
+          // of definitions, and response[3] is an array of urls.
 
-
-
+        for (var i= 0; i < response[1].length; i++) {
+          $('<a href=' + response[3][i] + '>' + response[1][i] + '<br/>' + response[2][i] + '</a>').appendTo('#results');
+          $('a').attr('target', '_blank');
+          $('a').css({'margin-bottom': '10px',
+                      'background-color': 'gray',
+                      'color': 'white'});
         }
+      }
+
+
+
+
 
       });
 
