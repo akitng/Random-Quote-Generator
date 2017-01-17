@@ -14,8 +14,12 @@ h1 {
 }
 
 #searchBtn{
-  margin: 0 auto 20px auto;
+  margin: 0 auto 50px auto;
   display: block;
+}
+
+#search_text{
+  display: none;
 }
 
 h2{
